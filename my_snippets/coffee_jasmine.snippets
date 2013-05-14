@@ -5,23 +5,28 @@
 extends coffee
 
 snippet des "Describe (coffee)" b
-describe '${1:description}', ->
-	$0
+describe "${1:description}", ->
+  $0
+endsnippet
+
+snippet con "Context (coffee)" b
+context "${1:description}", ->
+  $0
 endsnippet
 
 snippet it "it (coffee)" b
-it '${1:description}', ->
-	$0
+it "${1:description}", ->
+  $0
 endsnippet
 
 snippet bef "before each (coffee)" b
 beforeEach ->
-	$0
+  $0
 endsnippet
 
 snippet aft "after each (coffee)" b
 afterEach ->
-	$0
+  $0
 endsnippet
 
 snippet any "any (coffee)" b
@@ -30,7 +35,7 @@ endsnippet
 
 snippet ru "runs (coffee)" b
 runs ->
-	$0
+  $0
 endsnippet
 
 snippet wa "waits (coffee)" b
