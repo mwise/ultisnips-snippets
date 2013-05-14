@@ -4,52 +4,8 @@ extends texmath
 #                             LATEX SNIPPETS                              #
 ###########################################################################
 
-snippet r "\ref{}" w
+snippet r "\\ref{}" w
 \ref{$1}
-endsnippet
-
-snippet rm "\mathrm{}" w
-\mathrm{$1} $0
-endsnippet
-
-snippet fig "figure" b
-\begin{figure}[tbf] \centering
-  \includegraphics[width=${1}mm]{${2}.pdf}
-  \caption{${4}}
-  \label{fig:${5}}
-\end{figure}
-endsnippet
-
-snippet \f "\frac{}{}" w
-\frac{${1}}{${2}}${0}
-endsnippet
-
-snippet 3 "\langle | \rangle" w
-\langle ${1} \rangle ${0}
-endsnippet
-
-snippet \l "\left \rigth" w
-\left${2:$1} ${3} \right${1}${4}
-endsnippet
-
-snippet 9 "math" i
-\( ${1} \) ${2}
-endsnippet
-
-snippet figarray "figure array" b
-\begin{figure}[tbf] \centering$
-  \begin{array}{cc}
-    \includegraphics[width=${1}mm]{${2}.pdf} &
-    \includegraphics[width=${3}mm]{${4}.pdf} \\
-    (A) & (B)
-  \end{array}$
-  \caption{${5}}
-  \label{fig:${6}}
-\end{figure}
-endsnippet
-
-snippet 6 "\partial |"
-\partial ${1}
 endsnippet
 
 ###########################################################################
@@ -97,7 +53,7 @@ snippet desc "Description" b
 endsnippet
 
 #####################################
-# SECTIONS, CHAPTERS AND THERE LIKE #
+# SECTIONS, CHAPTERS AND THEIR LIKE #
 #####################################
 
 snippet part "Part" b
@@ -164,6 +120,14 @@ snippet subp "Subparagraph" b
 ${0}
 
 % subparagraph $2 (end)
+endsnippet
+
+###############
+#  Utilities  #
+###############
+
+snippet pac "Package" b
+\usepackage[${1:options}]{${2:package}}$0
 endsnippet
 
 # vim:ft=snippets:
